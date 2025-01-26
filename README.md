@@ -1,13 +1,28 @@
 
 ---
 
-# 📄 AI-Powered Resume Generator
+# 📄 **AI-Powered Resume Generator**  
 
-A cutting-edge web application that **analyzes job descriptions**, **optimizes resumes for ATS systems**, and **generates AI-enhanced resume content** using the OpenAI API, Flask, React, and PostgreSQL. 
+🚀 **Optimize your resume with AI-powered insights!** This web application **analyzes job descriptions**, **enhances resumes for ATS systems**, and **generates AI-driven feedback** to improve job application success. Built using **OpenAI API, Flask, React, and PostgreSQL**, this tool streamlines the resume optimization process for job seekers.
 
-<img src="images/Webpage.png" alt="Webpage Preview" width="600"/>
+---
 
-This project is designed to **help job seekers tailor their resumes** with AI-driven insights and real-time feedback, improving their chances of passing Applicant Tracking Systems (ATS).
+## **✨ Features**  
+✔ **ATS Optimization** – Tailors resumes to pass Applicant Tracking Systems.  
+✔ **AI-Driven Insights** – Provides keyword suggestions and formatting improvements.  
+✔ **Real-Time Feedback** – Instantly refines resume content based on job descriptions.  
+✔ **User-Friendly Interface** – Simple and interactive design for seamless usage.  
+
+---
+
+## **📌 Preview of the Application**  
+🔹 **Homepage:** The intuitive UI allows users to input their resume and job description effortlessly.  
+
+<img src="images/Webpage.png" alt="Website Home Page" width="650"/>
+
+🔹 **Resume Analysis:** The AI processes the resume and job description, providing **ATS match scores, missing keywords, and detailed recommendations**.  
+
+<img src="images/Output.png" alt="Website with sample inputs and outputs" width="650"/>
 
 ---
 
