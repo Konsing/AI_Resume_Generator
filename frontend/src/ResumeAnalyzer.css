@@ -1,0 +1,81 @@
+.container {
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    color: #007bff;
+  }
+  
+  p {
+    text-align: center;
+    color: #6c757d;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between the text boxes */
+    flex-wrap: wrap;
+  }
+  
+  .input-box {
+    flex: 1;
+    min-width: 300px; /* Prevents shrinking too much */
+  }
+  
+  textarea {
+    width: 100%;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .response-box {
+    background-color: #e3f2fd;
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .input-container {
+      flex-direction: column;
+    }
+  }
+  

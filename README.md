@@ -1,10 +1,17 @@
-# AI-Powered Resume Generator
-
-A comprehensive web application designed to **analyze job descriptions**, **optimize resumes**, and **generate AI-enhanced resume content** using the OpenAI API, Flask (Python), React, and PostgreSQL. This project helps job seekers tailor their resumes to Applicant Tracking Systems (ATS) and streamline their job search process.
 
 ---
 
-## Table of Contents
+# 📄 AI-Powered Resume Generator
+
+A cutting-edge web application that **analyzes job descriptions**, **optimizes resumes for ATS systems**, and **generates AI-enhanced resume content** using the OpenAI API, Flask, React, and PostgreSQL. 
+
+<img src="images/Webpage.png" alt="Webpage Preview" width="600"/>
+
+This project is designed to **help job seekers tailor their resumes** with AI-driven insights and real-time feedback, improving their chances of passing Applicant Tracking Systems (ATS).
+
+---
+
+## 📌 Table of Contents
 1. [Features](#features)  
 2. [Tech Stack](#tech-stack)  
 3. [Getting Started](#getting-started)  
@@ -12,125 +19,138 @@ A comprehensive web application designed to **analyze job descriptions**, **opti
 5. [Roadmap](#roadmap)  
 6. [Contributing](#contributing)  
 7. [License](#license)  
-8. [Contact](#contact)
+8. [Contact](#contact)  
 
 ---
 
-## Features
-- **Resume Analysis**: AI-driven suggestions for **ATS-friendly keywords** and improvements based on job descriptions.  
-- **Automated Resume Content Generation**: Creates or updates bullet points, skills, and sections tailored to specific roles.  
-- **Real-Time Feedback**: React frontend provides **instant** text improvements and analysis.  
-- **Secure Data Storage**: PostgreSQL database stores and retrieves user resumes and job descriptions.  
-- **Scalable Backend**: Flask (or Django) for processing resume data, calling AI models, and returning optimized content.
+## 🚀 Features
+- **Resume Analysis**: AI-driven suggestions for **ATS-friendly keywords** and improvements.  
+- **Automated Resume Content Generation**: AI enhances bullet points, skills, and sections tailored to job descriptions.  
+- **Real-Time AI Feedback**: React frontend provides **instant resume optimization** based on user input.  
+- **Secure Data Storage**: PostgreSQL database stores resumes and job descriptions.  
+- **User Authentication**: Login using Google OAuth (Upcoming Feature).  
+- **Export to PDF**: Generate and download optimized resumes.  
 
 ---
 
-## Tech Stack
-- **Backend**  
-  - **Flask (or Django)** – Manages API requests, processes data, and integrates with the AI model.  
-  - **OpenAI API** – Powers the NLP and language generation features.  
-  - **Python** – Core backend language enabling quick data manipulation and AI interactions.  
-  - **PostgreSQL** – Stores user data (resumes, job descriptions, generated content).
-
-- **Frontend**  
-  - **React** – Intuitive UI with real-time text updates and AI suggestions.  
-  - **Axios** – Handles communication with the Flask backend.  
-  - **Bootstrap (optional)** – For styling and responsive layouts.
-
-- **Deployment**  
-  - * Future deployment using AWS, GCP, or other cloud platforms.*
+## 🛠️ Tech Stack
+| **Category**  | **Technology**  |
+|--------------|----------------|
+| **Frontend** | React, Axios, Bootstrap/Tailwind |
+| **Backend**  | Flask (Python), FastAPI (optional) |
+| **AI API**   | OpenAI GPT-4 |
+| **Database** | PostgreSQL, SQLAlchemy |
+| **Authentication** | OAuth2 (Google, LinkedIn) |
+| **Deployment** | Docker, Render, Vercel |
 
 ---
 
-## Getting Started
+## 🔧 Getting Started
 
-### Prerequisites
-1. **Python 3.8+**  
-2. **Node.js & npm**  
-3. **PostgreSQL** (Installed & running)  
-4. **OpenAI API Key** (https://platform.openai.com/signup/) Get it here
+### **🔑 Prerequisites**
+Before setting up the project, ensure you have:
+- **Python 3.8+**
+- **Node.js & npm**  
+- **PostgreSQL** (Installed & running)  
+- **OpenAI API Key** (Sign up at [OpenAI](https://platform.openai.com/signup/))  
 
-### Installation
-
-**1. Clone the Repository**
-~~~
+### **📂 Installation Guide**
+#### **1️⃣ Clone the Repository**
+```sh
 git clone https://github.com/Konsing/AI_Resume_Generator.git
-cd AI-Resume-CoverLetter-Generator
-~~~
+cd AI-Resume-Generator
+```
 
-**2. Backend Setup**
-1. Create and activate a virtual environment:
-   ~~~
-   cd backend
-   python -m venv venv
-   venv\Scripts\activate  # Since I'm using Windows
-   ~~~
-2. Install dependencies:
-   ~~~
-   pip install -r requirements.txt
-   ~~~
-3. Create a `.env` file in the `backend` folder for your environment variables:
-   ~~~
-   OPENAI_API_KEY=your-openai-api-key
-   ~~~
-4. Configure PostgreSQL connection in `app.py` or `models.py`.
+#### **2️⃣ Backend Setup (Flask)**
+```sh
+cd backend
+python -m venv venv
+source venv/bin/activate  # (Windows users: venv\Scripts\activate)
+pip install -r requirements.txt
+```
 
-**3. Frontend Setup**
-1. Install Node.js dependencies:
-   ~~~
-   cd ../frontend
-   npm install
-   ~~~
+- Create a `.env` file inside the `backend` folder:
+```sh
+OPENAI_API_KEY=your-openai-api-key
+DATABASE_URL=postgresql://yourusername:yourpassword@localhost/ai_resume_db
+```
 
----
+- Initialize the database:
+```sh
+python setup_db.py
+```
 
-## Usage
-
-1. **Launch the Backend**  
-   - Make sure you’re in the `backend/` directory inside your virtual environment:
-     ~~~
-     python app.py
-     ~~~
-   - Flask server will start on **http://127.0.0.1:5000/**.
-
-2. **Start the Frontend**  
-   - In a separate terminal, navigate to the `frontend/` directory:
-     ~~~
-     npm start
-     ~~~
-   - React app will launch at **http://localhost:3000**.
-
-3. **Optimize or Generate Resume Content**  
-    - Paste your existing resume text and the relevant job description into the provided input fields.
-    - Click Generate / Optimize Resume.
-    - The backend uses the OpenAI API to enhance your resume content.
-
-4. **View Enhanced Resume**  
-   - See the updated resume in real-time.
-   - Optionally, store or refine your resumes for future use (if database integration is fully configured).
+- Run the backend:
+```sh
+python app.py
+```
+Your Flask API should now be running at **http://127.0.0.1:5000/**.
 
 ---
 
-## Roadmap
-- **User Authentication**: Implement user login (e.g., Google OAuth) to store multiple resumes/cover letters per user.
-- **Detailed ATS Optimization**: Expand AI prompts for more granular keyword suggestions.
-- **Deployment**: Host backend on AWS/GCP and serve the React app with a CDN or custom domain.
-- **Advanced Analytics**: Track user success metrics, measure improvements in job application responses.
+#### **3️⃣ Frontend Setup (React)**
+```sh
+cd ../frontend
+npm install
+npm start
+```
+The frontend should now be running at **http://localhost:3000**.
 
 ---
 
-## Contributing
+## 🎯 Usage
+
+### **1️⃣ Launch the Backend**
+```sh
+cd backend
+source venv/bin/activate
+python app.py
+```
+- Flask API starts at **http://127.0.0.1:5000/**.
+
+### **2️⃣ Start the Frontend**
+```sh
+cd frontend
+npm start
+```
+- React app opens at **http://localhost:3000**.
+
+### **3️⃣ AI Resume Optimization**
+- Paste your **resume text** and the **job description**.
+- Click **Analyze Resume** to get AI suggestions.
+- Download the **optimized ATS-friendly resume**.
+
+---
+
+## 📅 Roadmap
+- ✅ **Basic AI Resume Analysis**  
+- ✅ **Job-Resume Match Score**  
+- 🔜 **User Authentication (Google OAuth)**  
+- 🔜 **Export to PDF**  
+- 🔜 **Deployment on AWS/GCP**  
+
+---
+
+## 🤝 Contributing
+We welcome contributions! To contribute:  
 1. **Fork** this repository.  
-2. **Create** a new branch for your feature or bug fix:
-   ~~~
+2. **Create a new branch** for your feature:
+   ```sh
    git checkout -b feature/amazing-feature
-   ~~~
-3. **Commit** your changes:
-   ~~~
+   ```
+3. **Commit your changes**:
+   ```sh
    git commit -m "Add amazing feature"
-   ~~~
-4. **Push** to your branch:
-   ~~~
+   ```
+4. **Push to your branch**:
+   ```sh
    git push origin feature/amazing-feature
-   ~~~
-5. **Open** a Pull Request.
+   ```
+5. **Open a Pull Request**.
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---

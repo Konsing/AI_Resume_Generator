@@ -1,0 +1,4 @@
+# Ignore folders
+/backend/venv
+/frontend/node_modules
+*.env
